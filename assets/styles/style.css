@@ -1,0 +1,356 @@
+.anasayfa_menu {
+    display: inline;
+    /* yan yana çıkması için */
+}
+
+.anasayfa_menu a {
+    display: block;
+    /* sadece yazının değil dolguların da tıkllanabilir olmasını sağlar */
+    color: white;
+    text-align: center;
+    /* texti ortalar */
+    padding: 14px 16px;
+    text-decoration: none;
+    /* alt çizgiyi kaldırmak için */
+}
+
+.anasayfa {
+    /* anasayfa divi */
+}
+
+.anasayfa_bolum1 {
+    background-color: aqua;
+}
+
+.anasayfa_bolum1_icerik {}
+
+.anasayfa_bolum1_icerik_textarea {}
+
+.anasayfa_edittext {}
+
+.soru_textarea {}
+
+.anasayfa_bolum2 {
+    margin-top: 1%;
+}
+
+.anasayfa_bolum2_haberler {
+    background-color: #f7f1e3;
+}
+
+.img_news {
+    margin: auto;
+    padding: 2%;
+    width: 700px;
+}
+
+
+/*
+tunahan,edin
+*/
+
+body {
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    background-color: #f7f1e3;
+}
+
+* {
+    padding: 0;
+    border: 0;
+    list-style: none;
+}
+
+body a img {
+    margin-top: -82.5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul.menu {
+    background-image: linear-gradient(to right, #eabf9c, #e6ddc5);
+    margin: 50px 0px;
+    height: 37px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+ul.menu>li {
+    float: right;
+    list-style-type: none;
+    position: relative;
+}
+
+ul.menu>li>a {
+    color: #000;
+    font-size: 14px;
+    padding: 0px 15px;
+    e-height: 37px;
+    line-height: 37px;
+    border-right: 0px solid rgba(0, 0, 0, .1);
+}
+
+ul.menu>li>a:hover {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+ul.menu ul {
+    background: #e6ddc5;
+    width: 250px;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+ul.menu ul li a {
+    display: block;
+    padding: 7px 12px;
+    color: #000;
+    font-size: 14px;
+    border-bottom: 1px solid black;
+}
+
+ul.menu>li:hover>ul {
+    transition: 400ms all;
+    opacity: 1;
+    visibility: visible;
+    top: 40px;
+}
+
+
+/**/
+
+
+/**/
+
+
+/**/
+
+
+/**/
+
+
+/**/
+
+
+/**/
+
+
+/**/
+
+
+/**/
+
+
+/**/
+
+
+/**/
+
+
+/**/
+
+
+/**/
+
+
+/**/
+
+.arrow {
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 2px;
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    margin-bottom: 3px;
+}
+
+
+/**/
+
+
+/**/
+
+
+/**/
+
+
+/**/
+
+
+/**/
+
+
+/**/
+
+
+/**/
+
+
+/**/
+
+
+/**/
+
+
+/**/
+
+
+/**/
+
+
+/**/
+
+
+/**/
+
+
+/*sidebar*/
+
+#info a {
+    position: absolute;
+    left: -100px;
+    transition: 500ms;
+    padding: 15px;
+    width: 120px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+}
+
+#info a:hover {
+    left: 0;
+}
+
+#mission {
+    top: 140px;
+    background-color: #CAD3C8;
+}
+
+#Content {
+    top: 200px;
+    background-color: #d1ccc0;
+}
+
+#projects {
+    top: 260px;
+    background-color: #aaa69d;
+}
+
+#contact {
+    top: 320px;
+    background-color: #84817a;
+}
+
+
+/**/
+
+
+/**/
+
+
+/**/
+
+
+/**/
+
+
+/**/
+
+
+/**/
+
+
+/**/
+
+
+/**/
+
+
+/**/
+
+
+/**/
+
+
+/**/
+
+
+/**/
+
+
+/**/
+
+
+/*signup*/
+
+body,
+html {
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.si {
+    /* The image used */
+    background-image: url("book1.jpg");
+    min-height: 975px;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 75%;
+    position: relative;
+    top: -200px;
+}
+
+
+/* Add styles to the form container */
+
+.container {
+    position: absolute;
+    right: 500px;
+    margin: 300px;
+    max-width: 300px;
+    padding: 16px;
+}
+
+input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: 1px solid black;
+    background: #fff;
+}
+
+input[type=text]:focus,
+input[type=password]:focus {
+    background-color: #fff;
+    border: 1px solid black;
+}
+
+.btn {
+    background-color: #84817a;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.5;
+}
+
+.btn:hover {
+    opacity: 1;
+}
