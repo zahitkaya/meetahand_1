@@ -1,3 +1,4 @@
 
 
-<?php require 'static/footer.php';  ?>
+
+<?php require 'static/footer.php';?>

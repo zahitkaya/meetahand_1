@@ -2,11 +2,14 @@
 
 
 <?php
+
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
+
+
+
 require 'app/init.php';
 require 'app/view/static/header.php';
-
 
 $_url = get('url');
 $_url = array_filter(explode('/', $_url));
@@ -23,7 +26,7 @@ if (!file_exists(controller . '/' . $_url[0] . '.php')) {
 
 require controller($_url[0]);
 
-
+ 
 
 ?>
 

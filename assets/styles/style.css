@@ -3,6 +3,23 @@
     /* yan yana çıkması için */
 }
 
+.btn {
+    background-color: #302046;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    width: 100%;
+    opacity: 0.8;
+    font-size: 16px;
+}
+
+.sign form {
+    background-color: rgba(255, 255, 255, 0.3);
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px !important;
+}
+
 .anasayfa_menu a {
     display: block;
     /* sadece yazının değil dolguların da tıkllanabilir olmasını sağlar */
@@ -16,13 +33,16 @@
 
 .anasayfa {
     /* anasayfa divi */
+    background-image: url('book.jpg');
 }
 
 .anasayfa_bolum1 {
     background-color: aqua;
 }
 
-.anasayfa_bolum1_icerik {}
+.anasayfa_bolum1_icerik {
+    background-image: url('homepagebg.png');
+}
 
 .anasayfa_bolum1_icerik_textarea {}
 
@@ -34,15 +54,7 @@
     margin-top: 1%;
 }
 
-.anasayfa_bolum2_haberler {
-    background-color: #f7f1e3;
-}
-
-.img_news {
-    margin: auto;
-    padding: 2%;
-    width: 700px;
-}
+.anasayfa_bolum2_haberler {}
 
 
 /*
@@ -53,6 +65,14 @@ body {
     font-family: Roboto, sans-serif;
     font-size: 14px;
     background-color: #f7f1e3;
+    background-size: cover;
+}
+
+.ana {
+    border: 1px solid black;
+    margin: 0 auto;
+    width: 960px;
+    background: rgb(255, 255, 255);
 }
 
 * {
@@ -62,7 +82,9 @@ body {
 }
 
 body a img {
-    margin-top: -82.5px;
+    width: 300px;
+    height: 72px;
+    margin-top: -35px;
 }
 
 a {
@@ -71,10 +93,10 @@ a {
 
 ul.menu {
     background-image: linear-gradient(to right, #eabf9c, #e6ddc5);
-    margin: 50px 0px;
+    margin: 30px 0px;
     height: 37px;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
+    border-top: 1.5px solid black;
+    border-bottom: 1.5px solid black;
 }
 
 ul.menu>li {
@@ -87,7 +109,7 @@ ul.menu>li>a {
     color: #000;
     font-size: 14px;
     padding: 0px 15px;
-    e-height: 37px;
+    height: 37px;
     line-height: 37px;
     border-right: 0px solid rgba(0, 0, 0, .1);
 }
@@ -104,7 +126,6 @@ ul.menu ul {
     top: 30px;
     left: 0;
     opacity: 0;
-    visibility: hidden;
 }
 
 ul.menu ul li a {
@@ -228,102 +249,17 @@ ul.menu>li:hover>ul {
     border-radius: 0 5px 5px 0;
 }
 
-#info a:hover {
-    left: 0;
-}
-
-#mission {
-    top: 140px;
-    background-color: #CAD3C8;
-}
-
-#Content {
-    top: 200px;
-    background-color: #d1ccc0;
-}
-
-#projects {
-    top: 260px;
-    background-color: #aaa69d;
-}
-
-#contact {
-    top: 320px;
-    background-color: #84817a;
-}
-
-
-/**/
-
-
-/**/
-
-
-/**/
-
-
-/**/
-
-
-/**/
-
-
-/**/
-
-
-/**/
-
-
-/**/
-
-
-/**/
-
-
-/**/
-
-
-/**/
-
-
-/**/
-
-
-/**/
-
-
-/*signup*/
-
 body,
 html {
     height: 100%;
 }
 
+.hp_div4 {
+    height: 20%;
+}
+
 * {
     box-sizing: border-box;
-}
-
-.si {
-    /* The image used */
-    background-image: url("book1.jpg");
-    min-height: 975px;
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 75%;
-    position: relative;
-    top: -200px;
-}
-
-
-/* Add styles to the form container */
-
-.container {
-    position: absolute;
-    right: 500px;
-    margin: 300px;
-    max-width: 300px;
-    padding: 16px;
 }
 
 input[type=text],
@@ -335,22 +271,93 @@ input[type=password] {
     background: #fff;
 }
 
-input[type=text]:focus,
-input[type=password]:focus {
-    background-color: #fff;
-    border: 1px solid black;
+.container {
+    color: #b33939;
+    font-size: 16px;
+    font-family: 'Roboto', cursive;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+    display: block;
+    width: 1620px;
+    height: 450px;
+    background-color: #457b9d;
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 16px;
+    font-family: 'Roboto', cursive;
 }
 
-.btn {
-    background-color: #84817a;
-    color: white;
-    padding: 16px 20px;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    opacity: 0.5;
+#st-box {
+    float: left;
+    width: 300px;
+    height: 400px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    background-color: #f1faee;
 }
 
-.btn:hover {
-    opacity: 1;
+#nd-box {
+    float: left;
+    width: 300px;
+    height: 400px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    background-color: #f1faee;
+    margin-left: 350px;
+}
+
+#rd-box {
+    float: right;
+    width: 300px;
+    height: 400px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    background-color: #f1faee;
+}
+
+.containerTitle {
+    font-size: 40px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.signinContainer {
+    margin: auto;
+    width: 40%;
+    padding: 2%;
+}
+
+
+/* hp */
+
+.hp_div2 {
+    overflow: hidden;
+}
+
+.hp_div2 a {
+    float: right;
+    color: #e55039;
+    background-color: #000;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 15px;
+}
+
+.hp_div2 a:hover {
+    background-color: #e55039;
+    color: black;
+    border-color: black;
+    border-width: 1px;
+    border-radius: 4px;
+}
+
+#hp_div5_title {
+    background-image: url(back.png);
+    background-repeat: no-repeat;
+    background-position: 0 0.1%;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Abril Fatface', cursive;
 }

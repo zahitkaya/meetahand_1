@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html>
+<?php
+session_start();
+ob_start();
+?>
 
 <head>
     <title>başlık</title>
@@ -7,13 +11,27 @@
     <link rel="stylesheet" href=" <?= asset_url('styles/style.css'); ?>"> <!-- CSS Ekleme -->
 </head>
 
+
 <body>
-    <a href="<?php echo url  ?>"><img src="<?php echo asset_url('images/Meetahandlogo.jpg'); ?>" alt="logo" height="155px" align="left" /></a>
+
+    <a id="logom" href="<?php echo url  ?>"><img src="<?php echo asset_url('images/Meetahandlogosign1.jpg'); ?>" alt="logo" height="155px" align="left" /></a>
     <!-- Arka plan resmi -->
+    <?php $target_link = url; ?>
+
+
+
 
     <ul class="menu">
+
         <li>
-            <a href="signin"> Sign In</a>
+            <a href="logout" style="display: <?php if (!isset($_SESSION['login'])) {
+                                                    echo  'none;';
+                                                } ?>"> Log out </a>
+        </li>
+        <li>
+            <a href="signin" style="display: <?php if ($_SESSION['login']) {
+                                                    echo  'none;';
+                                                } ?>"> Sign In</a>
         </li>
         <li>
             <a href="#"> Contact Us </a>
@@ -50,11 +68,10 @@
                 <li>
                     <a href="#"> Computer Engineering </a>
                 </li>
-                
+
                 <?php foreach ($bolum_ad as $key => $value) {
-                    echo '<li><a href='.url.'/konu/'.$key.'>';
+                    echo '<li><a href=' . url . '/konu/' . $key . '>';
                     echo $value;
-                   
                 }
                 echo '</a></li>'; ?>
             </ul>
@@ -64,71 +81,143 @@
             <a href="<?php echo url ?>"> Home</a>
         </li>
     </ul>
-    <div id="info" class="sidenav">
-        <a href="#" id="mission">Mission</a>
-        <a href="#" id="Content">Content</a>
-        <a href="#" id="projects">Projects</a>
-        <a href="#" id="contact">Contact</a>
-    </div>
+    <div class="anasayfa" id="anasayfa" style='<?php if ($_SERVER['REQUEST_URI'] <> "/meetahand/") echo "display:none" ?>'>
 
-    <div class="anasayfa" style='<?php if ($_SERVER['REQUEST_URI'] <> "/meetahand/") echo "display:none" ?>'>
-        <!-- eğer current url /meetahand/ değilse gösterme -->
-
-        <div class="anasayfa_bolum1">
-            <div class="anasayfa_bolum1_icerik" align="center">
-                <!--  <div class="anasayfa_bolum1_icerik_bilgi">
-                    <p> meetahand.com</p>
-                    <p>Öğrencilerin dostu</p>
-                    <a href="#">Hakkımızda</a>
-                    <a href="#">Aramıza katıl </a>
-                </div>
-                <div class="anasayfa_bolum1_icerik_textarea">
-                    <form action="" method="POST">
-                        <textarea name="title" id="soru_textarea" cols="30" rows="10">
-                         Sormak istediğiniz soruyu buraya yazın.  </textarea>
-                    </form>
-
-                </div> -->
-
-            </div><!-- anasayfa_bolum1_icerik divi sonu -->
-
-        </div> <!-- anasayfa_bolum1 divi sonu -->
-        <div class="anasayfa_bolum2">
-            <div class="anasayfa_bolum2_haberler" align=center>
-                <?php
-                $api = 'http://newsapi.org/v2/everything?q=bitcoin&from=2020-11-20&sortBy=publishedAt&apiKey=26fe010fe2da4bb493a5b284eec3028b';
-                $response = file_get_contents($api);
-                $NewsData = json_decode(($response));
-                foreach ($NewsData->articles as $News) {
-                ?>
-
-                    <h2>haber</h2>
-                    <img src="<?php echo $News->urlToImage; ?>" alt="" class="img_news">
-                    <h3><?php echo $News->title; ?></h3>
-                    <p><?php echo $News->description; ?></p>
-                    <p><?php echo $News->content; ?></p>
-                    <p><?php echo $News->publishedAt; ?></p>
+        <img src="<?php echo asset_url('images/education.jpg') ?>" id="homeimg" width="100%" height="%20" align="center" />
 
 
-                    <!--
-                echo $News->urlToImage;
-                echo $News->title;
-                echo $News->description;
-                echo $News->content;
-                echo $News->author;
-                echo $News->publishedAt;
-                */
-                -->
+        <script>
+            document.getElementById('anasayfa').style.backgroundRepeat="no-repeat";
+        </script>
 
+ 
+        
+    <center>
+        <h1 class="containerTitle">MISSIONS</h1>
 
-                <?php } ?>
+        <div class="container" id="container1">
+            <div id="st-box">
 
+                <img src="<?php echo asset_url('images/mis2.png') ?>" width="125px" height="125px" alt="" />
 
+                <h1>Engineer</h1>
 
+                <p>Raising Capable Engineers</p>
 
+                <p>Reminders for Engineers</p>
 
-                Buraya haber API'dan çektiğimiz haberleri gireceğiz.
+                <p>Informing Interested People</p>
             </div>
-        </div><!-- anasayfa_bolum2 divi sonu -->
-    </div> <!-- anasayfa divi sonu -->
-    <!-- shift+alt+f -->
+
+            <div id="nd-box">
+                <p>
+                    <br>
+                    <img src="<?php echo asset_url('images/mis12.png') ?>" width="150px" height="111px" alt="" />
+
+                    <h1>Interaction</h1>
+
+                    <p>Proved and Reliable Information</p>
+
+                    <p>Ease of Usage</p>
+                    <br>
+                    <p></p>
+                </p>
+            </div>
+
+            <div id="rd-box">
+                <br>
+                <img src="<?php echo asset_url('images/mis3.png') ?>" width="125px" height="115px" alt="" />
+                <h1>Profession</h1>
+
+                <p>Experience Exchange</p>
+
+                <p>&nbsp Critical Advices From Qualified Professionals</p>
+                <br>
+            </div>
+        </div>
+    </center>
+
+    <center>
+        <h1 class="containerTitle">CONTENT</h1>
+
+        <div class="container">
+            <div id="st-box">
+                <img src="<?php echo asset_url('images/lecno.png') ?>" width="125px" height="125px" alt="" />
+                <br>
+                <h1>Lectures</h1>
+
+                <p>Comprehensive and Target-Oriented Notes</p>
+
+                <p>Combined with Journal Contexts</p>
+                <br>
+            </div>
+
+            <div id="nd-box">
+                <p>
+                    <img src="<?php echo asset_url('images/app.png') ?>" width="125px" height="125px" alt="" />
+                    <br>
+                    <h1>Appointments</h1>
+
+                    <p>Rendezvous with Professionals</p>
+
+                    <p>Non-conflict Schedules</p>
+                    <br>
+                </p>
+            </div>
+
+            <div id="rd-box">
+                <img src="<?php echo asset_url('images/sho.png') ?>" width="135px" height="110px" alt="" />
+                <br><br>
+                <h1>Store</h1>
+
+                <p>Access to Lecture Note Books</p>
+
+                <p>Hour-based Lecture Packages</p>
+
+                <p>Meet a Hand Brand Products</p>
+            </div>
+        </div>
+    </center>
+
+    <center>
+        <h1 class="containerTitle">STAFF</h1>
+
+        <div class="container">
+            <div id="st-box">
+                <img src="<?php echo asset_url('images/mw.png') ?>" width="135px" height="102px" alt="" />
+                <h1>Computer Engineering</h1>
+
+                <p>Aslı Keklik</p>
+
+                <p>Mehmet Zahit Kaya</p>
+                <br>
+            </div>
+
+            <div id="nd-box">
+                <img src="<?php echo asset_url('images/mw.png') ?>" width="135px" height="102px" alt="" />
+                <h1>Electronics Engineering</h1>
+
+                <p>Hatice Kübra Tahaoğlu</p>
+
+                <p>Tunahan Bilgili</p>
+                <br>
+            </div>
+
+            <div id="rd-box">
+                <img src="<?php echo asset_url('images/mm.png') ?>" width="135px" height="105px" alt="" />
+                <h1>Mechatronics Engineering</h1>
+
+                <p>Atakan Türker</p>
+
+                <p>Edin Sancaklı</p>
+            </div>
+        </div>
+    </center>
+
+
+</div>
+
+
+
+<!-- anasayfa divi sonu -->
+<!-- shift+alt+f -->

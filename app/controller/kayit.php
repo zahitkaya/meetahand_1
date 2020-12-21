@@ -1,19 +1,31 @@
-<?php 	
-if(post('submit')){
-	$data['user_name']=post('user_name');
-	$data['user_url']=permalink(post('user_name'));
-	if(!$data['user_url']){
-		  echo $error = 'kullanıcı adı boş olamaz';
-	}
-	else {
-		$sql=$db->prepare('insert into users set user_name=?,user_url=?');
-		$sonuc=$sql->execute([$data['user_name'],$data['user_url']]);
-		if($sonuc) echo $data['user_name'].' başarıyla DB ye eklendi';
-		else echo 'başarısız';
-
-
-	}
+<div id="Kapsa">en dış
+  <div id="ust">5</div>
+    <div id="orta">1
+      <div id="bir">2</div>
+      <div id="iki">3</div>
+      <div id="uc">4</div>
+  </div>
+  <div class="temizle">6</div>
+  <div id="alt"></div>
+</div>
+<style>
+	#Kapsa {
+    width: 800px;
+    height: auto; 
 }
-require view('kayit');
-
- ?>
+#bir {
+   float: left;
+   width: 200px;
+}
+#iki {
+   float: left;
+   width: 400px;
+}
+#uc {
+   float: left;
+   width: 200px;
+}
+.temizle {
+   
+}
+</style>
