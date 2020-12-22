@@ -26,7 +26,6 @@ if (!file_exists(controller . '/' . $_url[0] . '.php')) {
 
 require controller($_url[0]);
 
- 
 
 ?>
 

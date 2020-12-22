@@ -34,11 +34,6 @@ try {
 require 'system/config.php';
 require 'system/dbConstants.php';
 
-
-
-
-
-
 helper::Load();
 ?>
 

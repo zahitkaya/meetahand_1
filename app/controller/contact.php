@@ -59,6 +59,12 @@
           if (isset($_POST['submit'])) {
 
             mysqli_query($conn, "INSERT INTO contact (firstname, lastname,email,message) VALUES ('$firstname','$lastname','$email','$message')");
+
+            echo '<script>alert("Message Received ") ;
+                    window.location.replace("'.url.'");
+                    </script>';  
+
+
           }
         }
 

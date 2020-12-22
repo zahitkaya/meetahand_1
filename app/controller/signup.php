@@ -52,7 +52,7 @@
                     $_SESSION["login"] = "true";
                     $_SESSION["pass"] = $pass;
                  
-                    echo '<script>alert("Welcome '.$email.' ") 
+                    echo '<script>alert("Welcome '.$email.' ");
                     window.location.replace("'.url.'");
                     </script>';           
                   

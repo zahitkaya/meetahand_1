@@ -2,6 +2,7 @@
 function filterUrl($str){
     return htmlspecialchars(trim($str));
 }
+
 function get($name){
     if(isset($_GET[$name])){
         if(is_array($_GET[$name])){
