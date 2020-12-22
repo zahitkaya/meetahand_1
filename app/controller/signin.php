@@ -1,9 +1,4 @@
-<?php
-$target_link = url;
 
-
-
-?>
 <script>
    document.body.style.backgroundImage = "url(<?php echo asset_url('images/signinbg2.jpg') ?>)";
    document.body.style.backgroundRepeat = "no-repeat";
@@ -23,9 +18,10 @@ $target_link = url;
       <label for="pass"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="pass" id="pass" required>
 
-     
+      <a style=' color: blue; font-size:16px; font-weight:900;' href="<?php echo url.'/signup' ?>">Dont you have account? Sign up here</a>
+ 
 
-      <button type="submit" class="btn" name="submit">Login</button>
+      <button type="submit" class="btn" name="submit" style="margin-top: 4px;">Login</button>
 
 
 <?php
@@ -50,11 +46,12 @@ if (isset($_POST['submit'])) {
       $result = mysqli_query($conn, $query);
       $count = mysqli_num_rows($result);
 
+    
      
       if ($count == 1) {
 
          $_SESSION["login"] = "true";
-         $_SESSION["user"] = $user;
+         $_SESSION["email"] = $email;
          $_SESSION["pass"] = $pass;
          header("Location: " . url . ""); // Redirecting to other page
       }
@@ -65,12 +62,13 @@ if (isset($_POST['submit'])) {
          $_SESSION["login"]="false";
          $i++;
       }
+    
      
    }
 }
 ?>
-
 </form>
 
 
 </div>
+
