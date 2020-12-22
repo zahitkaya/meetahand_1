@@ -19,17 +19,17 @@
       <form action="" class="form1" method="POST">
 
         <label for="fname">First Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
 
         <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
 
         <label for="email">Email</label>
-        <input type="text" id="email" name="email" placeholder="Your email..">
+        <input type="text" id="email" name="email" placeholder="Your email.." required>
 
         <label for="message">Message</label>
 
-        <textarea id="message" name="message" placeholder="Your message.." style="width:300px"></textarea>
+        <textarea id="message" name="message" placeholder="Your message.." style="width:300px" required></textarea>
 
         <br><br>
         <input type="submit" value="Submit" name="submit">
